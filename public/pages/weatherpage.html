@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="Description" content="Enter your description here" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <title>Title</title>
+  </head>
+  <body>
+    <div class="container">
+      <form id="user-form" class="my-3">
+        <div class="form-group">
+          <label class="jumboLabel" for="zip-input">Get the weather</label>
+          <input
+            class="form-control"
+            id="zip-input"
+            placeholder="Zipcode (i.e. 21043)"
+          /><br />
+        </div>
+        <input
+          class="btn btn-outline-primary btn-lg search-zip submit"
+          type="submit"
+          value="Get Weather"
+        />
+        <hr />
+      </form>
+
+      <table class="table">
+  <thead>
+     <tr>
+      <th scope="row">
+        <div id="city">Enter a United States Zip Code (i.e. 21043) to get weather data!
+        </div>
+      </th>
+    </tr>
+  </thead>
+  </tbody>
+</table>
+
+      <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Date</th>
+      <th scope="col">Temp in °F</th>
+      <th scope="col">Weather</th>
+      <th scope="col">Clothes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">
+       <div id="date_1">Day 1
+        </div>
+      </th>
+      <td>
+        <div id="temp_1">
+        </div>
+      </td>
+      <td>
+        <div id="weather_1">
+        </div>
+      </td>
+      <td>
+        <div id="clothes_1">
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">
+       <div id="date_2">Day 2
+        </div>
+      </th>
+      <td>
+        <div id="temp_2">
+        </div>
+      </td>
+      <td>
+        <div id="weather_2">
+        </div>
+      </td>
+      <td>
+        <div id="clothes_2">
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">
+       <div id="date_3">Day 3
+        </div>
+      </th>
+      <td>
+        <div id="temp_3">
+        </div>
+      </td>
+      <td>
+        <div id="weather_3">
+        </div>
+      </td>
+      <td>
+        <div id="clothes_3">
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">
+       <div id="date_4">Day 4
+        </div>
+      </th>
+      <td>
+        <div id="temp_4">
+        </div>
+      </td>
+      <td>
+        <div id="weather_4">
+        </div>
+      </td>
+      <td>
+        <div id="clothes_4">
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">
+       <div id="date_5">Day 5
+        </div>
+      </th>
+      <td>
+        <div id="temp_5">
+        </div>
+      </td>
+      <td>
+        <div id="weather_5">
+        </div>
+      </td>
+      <td>
+        <div id="clothes_5">
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+      
+      <div id="resultsDiv"></div>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="../js/weatherpage.js"></script>
+  </body>
+</html>
