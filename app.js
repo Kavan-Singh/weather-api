@@ -1,12 +1,12 @@
 // require all needed modules
 const express = require("express");
-const fetch = require("node-fetch");
-const argv = require("yargs").argv;
+//const fetch = require("node-fetch");
+//const argv = require("yargs").argv;
 
 // declare port
 const PORT = process.env.PORT || 3000;
 
-let zipcode = argv.z || "21043";
+//let zipcode = argv.z || "21043";
 
 // set up express server
 const app = express();

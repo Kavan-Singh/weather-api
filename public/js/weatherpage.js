@@ -164,7 +164,7 @@ $(document).ready(function () {
       $("#weather_5").text(weatherData[4].description);
 
       $("#resultsDiv").empty();
-
+      $("#zip-input").val("");
 
     })
     .catch(err => {
