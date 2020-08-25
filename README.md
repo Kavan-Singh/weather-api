@@ -38,4 +38,6 @@ if (response.cod != 200)	{
 
 I would have followed up with emptying all previous data variables.
 
+I later learned that you need to create a printError function and make an error call in the .ajax in order to show the invalid zip. So eventually I did get it.
+
 Other than that, there were not many other difficulties and the project was a fun experience to work on!

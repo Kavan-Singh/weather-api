@@ -4,6 +4,50 @@ $(document).ready(function () {
   const baseUrl = "http://api.openweathermap.org/data/2.5/forecast?zip=";
   const apiKey = "39f8b0f7ad947fc8b5a6b1a510b40cdb&units=imperial";
 
+
+  // Error message function if the user enters a invalid zip: Empty's out all tables and removes tables
+  const printError = function (req, status, err) {
+      console.log("Something went wrong", status, err);
+
+      $("#resultsDiv").empty();
+      $("#date_1").empty();
+      $("#temp_1").empty();
+      $("#clothes_1").empty();
+      $("#weather_1").empty();
+
+      $("#date_2").empty();
+      $("#temp_2").empty();
+      $("#clothes_2").empty();
+      $("#weather_2").empty();
+
+      $("#date_3").empty();
+      $("#temp_3").empty();
+      $("#clothes_3").empty();
+      $("#weather_3").empty();
+
+      $("#date_4").empty();
+      $("#temp_4").empty();
+      $("#clothes_4").empty();
+      $("#weather_4").empty();
+
+      $("#date_5").empty();
+      $("#temp_5").empty();
+      $("#clothes_5").empty();
+      $("#weather_5").empty();
+
+      $("#city").empty();
+
+      $("#wholeTable").hide();
+      $("#titleTable").hide();
+
+      // Print statment for error
+      $("#resultsDiv").html(
+        "Please enter a valid zipcode in the United States."
+      );
+
+      $("#zip-input").val("");
+    };
+
   // Based on the temp, we decide what type of clothes the user should pacl
   function whatClothes(temp) {
       if (temp >= 75)  {
@@ -56,7 +100,11 @@ $(document).ready(function () {
     $.ajax({
       url: apiUrl,
       method: "GET",
+      error: printError,
     }).then(function (response) {
+      // Shows the tables
+      $("#titleTable").show();
+      $("#wholeTable").show();
 
       weatherData = [];  // each time a new zip is entered, the previous weather data needs to be cleared out
       
@@ -82,6 +130,7 @@ $(document).ready(function () {
 
         weatherData.push(thisDay); // Add the specific days JSON data to the array of 5 days.
       }
+      
       $("#city").text("The is the 5 day forecast for: " + weatherData[0].city + ", " + weatherData[0].country);
 
       // Day 1 Data to print
@@ -113,6 +162,8 @@ $(document).ready(function () {
       $("#temp_5").text(weatherData[4].temp);
       $("#clothes_5").text(weatherData[4].clothes);
       $("#weather_5").text(weatherData[4].description);
+
+      $("#resultsDiv").empty();
 
 
     })
